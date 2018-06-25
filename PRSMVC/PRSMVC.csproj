@@ -156,6 +156,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\PurchaseRequestLineItemsController.cs" />
     <Compile Include="Controllers\PurchaseRequestsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
@@ -166,6 +167,14 @@
     <Compile Include="Migrations\201806201418442_initial.Designer.cs">
       <DependentUpon>201806201418442_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806201505152_initial1.cs" />
+    <Compile Include="Migrations\201806201505152_initial1.Designer.cs">
+      <DependentUpon>201806201505152_initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806202306589_added class, contollers, and ViewModel.cs" />
+    <Compile Include="Migrations\201806202306589_added class, contollers, and ViewModel.Designer.cs">
+      <DependentUpon>201806202306589_added class, contollers, and ViewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\PRSMVCContext.cs" />
@@ -173,7 +182,9 @@
     <Compile Include="Models\PurchaseRequestLineItem.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vendor.cs" />
+    <Compile Include="ViewModel\PurchaseRequestForUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\PurchaseRequestLineItemsUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -184,6 +195,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\BlackBowTie.jpg" />
+    <Content Include="Images\BlackRockyRidgeSilverado.jpg" />
+    <Content Include="Images\BlueRockyRidgeSilverado.png" />
+    <Content Include="Images\home-RRDifference-headers-innovation.png" />
+    <Content Include="Images\home-RRDifference-headers-quality.png" />
+    <Content Include="Images\home-RRDifference-headers-trust.png" />
+    <Content Include="Images\RedRockyRidgeSilverado.jpg" />
+    <Content Include="Images\RedWhiteBlueBowTie.jpg" />
+    <Content Include="Images\RRBackGround.jpg" />
+    <Content Include="Images\RRLogo.png" />
+    <Content Include="Images\TanRockyRidgeSilverado.jpg" />
+    <Content Include="Images\WhiteRockyRidgeSilverado.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -234,6 +257,12 @@
     <Content Include="Views\PurchaseRequests\Details.cshtml" />
     <Content Include="Views\PurchaseRequests\Edit.cshtml" />
     <Content Include="Views\PurchaseRequests\Index.cshtml" />
+    <Content Include="Views\Users\PurchaseRequestForUser.cshtml" />
+    <Content Include="Views\PurchaseRequestLineItems\Create.cshtml" />
+    <Content Include="Views\PurchaseRequestLineItems\Delete.cshtml" />
+    <Content Include="Views\PurchaseRequestLineItems\Details.cshtml" />
+    <Content Include="Views\PurchaseRequestLineItems\Edit.cshtml" />
+    <Content Include="Views\PurchaseRequestLineItems\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +283,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806201418442_initial.resx">
       <DependentUpon>201806201418442_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201505152_initial1.resx">
+      <DependentUpon>201806201505152_initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806202306589_added class, contollers, and ViewModel.resx">
+      <DependentUpon>201806202306589_added class, contollers, and ViewModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

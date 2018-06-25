@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PRSMVC.Models;
+using PRSMVC.ModelView;
 
 namespace PRSMVC.Controllers
 {
@@ -14,7 +15,14 @@ namespace PRSMVC.Controllers
     {
         private PRSMVCContext db = new PRSMVCContext();
 
-        // GET: Users
+		// GET: Users
+		public ActionResult PurchaseRequestForUser(int? id) {
+			PurchaseRequestForUser purchaseRequest = new PurchaseRequestForUser();
+			purchaseRequest.User = db.Users.Find(id);
+			purchaseRequest.PurchaseRequests = db.PurchaseRequests.Where(o => o.UserId == id).ToList();		
+			return View(purchaseRequest);
+		}
+
         public ActionResult Index()
         {
             return View(db.Users.ToList());

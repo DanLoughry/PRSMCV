@@ -7,7 +7,7 @@ namespace PRSMVC.Models
 {
 	public class PurchaseRequestLineItem	{
 
-		int id { get; set; }
+		public int Id { get; set; }
 		public int Quantity { get; set; }
 		public int PurchaseRequestId { get; set; }
 		public int ProductId { get; set; }

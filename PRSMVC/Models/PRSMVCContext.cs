@@ -26,5 +26,7 @@ namespace PRSMVC.Models
 		public System.Data.Entity.DbSet<PRSMVC.Models.Product> Products { get; set; }
 
 		public System.Data.Entity.DbSet<PRSMVC.Models.PurchaseRequest> PurchaseRequests { get; set; }
+
+		public System.Data.Entity.DbSet<PRSMVC.Models.PurchaseRequestLineItem> PurchaseRequestLineItems { get; set; }
 	}
 }

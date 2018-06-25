@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PRSMVC.Models.PurchaseRequestLineItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div style="width:49%;display:inline-block;image"><img src="~/Images/RRLogo.png" style="width: 225px" /></div>
+
+<h2>Purchase Request Line Item</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.PartNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PurchaseRequest.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.PartNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseRequest.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,59 @@
+﻿@model PRSMVC.ModelView.PurchaseRequestForUser
+@{
+    ViewBag.Title = "PurchaseRequestForUser";
+}
+
+<h2>PurchaseRequestForUser</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Justification
+        </th>
+        <th>
+            ReasonForRejection
+        </th>
+        <th>
+            DeliveryMode
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Total
+        </th>
+    </tr>
+        @foreach (var PR in Model.PurchaseRequests) {
+            <tr>
+            <td>
+                @Model.User.Username
+            </td>            
+            <td>
+                @PR.Description
+            </td>
+            <td>
+                @PR.Justification
+            </td>
+            <td>
+                @PR.RejectionReason
+            </td>
+            <td>
+                @PR.DeliveryMode
+            </td>
+            <td>
+                @PR.Status
+            </td>
+            <td>
+                @PR.Total
+            </td>
+    </tr>
+
+        }
+
+</table>
